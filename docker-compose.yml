@@ -1,0 +1,63 @@
+services:
+  mosquitto:
+    image: eclipse-mosquitto:latest
+    container_name: health_mosquitto
+    restart: unless-stopped
+    ports:
+      - "1883:1883"
+    volumes:
+      - ./mosquitto/config/mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/log:/mosquitto/log
+    networks:
+      - health_net
+
+  nodered:
+    image: nodered/node-red:latest
+    container_name: health_nodered
+    restart: unless-stopped
+    ports:
+      - "1880:1880"
+    volumes:
+      - nodered_data:/data
+    networks:
+      - health_net
+    depends_on:
+      - mosquitto
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: health_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: health_db
+      POSTGRES_USER: health_user
+      POSTGRES_PASSWORD: health_password
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - health_net
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: health_grafana
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+    networks:
+      - health_net
+    depends_on:
+      - postgres
+
+networks:
+  health_net:
+    driver: bridge
+
+volumes:
+  nodered_data:
+  postgres_data:
+  grafana_data:

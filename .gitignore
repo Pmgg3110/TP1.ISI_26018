@@ -1,0 +1,12 @@
+# Dados e logs dos contentores Docker
+mosquitto/data/
+mosquitto/log/
+postgres_data/
+grafana_data/
+nodered_data/
+logs/
+
+# Ficheiros de dados e BDs dinâmicas
+*.db
+*.csv
+*.log

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pacientes>
+    <paciente>
+        <patient_id>P001</patient_id>
+        <nome_paciente>João Santos</nome_paciente>
+        <idade>65</idade>
+        <medico_responsavel>Dr. António Silva</medico_responsavel>
+    </paciente>
+    <paciente>
+        <patient_id>P002</patient_id>
+        <nome_paciente>Maria Oliveira</nome_paciente>
+        <idade>42</idade>
+        <medico_responsavel>Dra. Mariana Costa</medico_responsavel>
+    </paciente>
+    <paciente>
+        <patient_id>P003</patient_id>
+        <nome_paciente>Carlos Pereira</nome_paciente>
+        <idade>58</idade>
+        <medico_responsavel>Doutor António Silva</medico_responsavel>
+    </paciente>
+    <paciente>
+        <patient_id>P004</patient_id>
+        <nome_paciente>Ana Rodrigues</nome_paciente>
+        <idade>30</idade>
+        <medico_responsavel>Dr. Rui Fernandes</medico_responsavel>
+    </paciente>
+    <paciente>
+        <patient_id>P005</patient_id>
+        <nome_paciente>Tiago Mendes</nome_paciente>
+        <idade>12</idade>
+        <medico_responsavel>Doutora Sofia Almeida</medico_responsavel>
+    </paciente>
+    <paciente>
+        <patient_id>P006</patient_id>
+        <nome_paciente>Beatriz Sousa</nome_paciente>
+        <idade>8</idade>
+        <medico_responsavel>Dra. Sofia Almeida</medico_responsavel>
+    </paciente>
+    <paciente>
+        <patient_id>P007</patient_id>
+        <nome_paciente>Manuel Teixeira</nome_paciente>
+        <idade>78</idade>
+        <medico_responsavel>Pedro Martins</medico_responsavel>
+    </paciente>
+    <paciente>
+        <patient_id>P008</patient_id>
+        <nome_paciente>Teresa Gomes</nome_paciente>
+        <idade>50</idade>
+        <medico_responsavel>Dra. Mariana Costa</medico_responsavel>
+    </paciente>
+</pacientes>
