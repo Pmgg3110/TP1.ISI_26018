@@ -41,7 +41,7 @@ docker compose up -d
 
     Como a pasta nodered_data já está mapeada, o fluxo de sensores deverá estar disponível.
 
-    Ativa o processo de simulação clicando nos nós de injeção (botões azuis à esquerda dos nós) para começar a gerar telemetria.
+    Ativa o processo de simulação clicando nos nós de injeção para começar a gerar telemetria.
 
 3. Executar o Pipeline ETL no Pentaho
 
@@ -49,7 +49,7 @@ docker compose up -d
 
     Acede à pasta pentaho/ e abre o ficheiro do Job principal.
 
-    Clica no botão Run (ícone de play verde). A extração ficará a correr em tempo real à escuta do MQTT.
+    Clica no botão Run. A extração ficará a correr em tempo real à escuta do MQTT.
 
 4. Consultar os Dashboards no Grafana
 
